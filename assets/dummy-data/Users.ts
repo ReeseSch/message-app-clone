@@ -39,4 +39,11 @@ export default [{
   id: 'u10',
   name: 'Angelina Jolie',
   imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg',
-}]
+},
+{
+  id: 'u11',
+  name: 'Reese',
+  imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
+}
+
+]

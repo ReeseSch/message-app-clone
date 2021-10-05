@@ -1,9 +1,9 @@
 export default [{
   id: '1',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing',
   }, {
     id: 'u2',
     name: 'Elon Musk',
@@ -11,7 +11,7 @@ export default [{
   }],
   lastMessage: {
     id: 'm1',
-    content: 'btw, SpaceX is interested in buying notJust.dev!',
+    content: 'Bro, lets go colonize Mars!',
     createdAt: '2020-10-03T14:48:00.000Z',
   }
 }, {

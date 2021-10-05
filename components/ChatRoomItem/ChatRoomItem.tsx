@@ -2,7 +2,8 @@ import React from "react";
 import { Text, StyleSheet, View, Image } from 'react-native'
 import styles from "./styles";
 
-export default function ChatRoomItem() {
+export default function ChatRoomItem(props) {
+  const chatRoom = props.chatRoom
     return (
     <View style={styles.container}>
         <Image source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png'}} style={styles.image} />
@@ -16,7 +17,7 @@ export default function ChatRoomItem() {
             <Text style={styles.text}>12:00 PM</Text>
             </View>
             {/* message content */}
-            <Text numberOfLines={1} style={styles.text}>Bro, let's go colonize Mars!</Text>
+            <Text numberOfLines={1} style={styles.text}>{chatRoom.lastMessage.content}</Text>
         </View>
     </View>)
 }
