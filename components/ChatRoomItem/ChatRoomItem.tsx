@@ -4,17 +4,22 @@ import styles from "./styles";
 
 export default function ChatRoomItem(props) {
   const chatRoom = props.chatRoom
+
+  const user = chatRoom.users[1]
+
     return (
     <View style={styles.container}>
-        <Image source={{ uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png'}} style={styles.image} />
+        <Image source={{ uri: user.imageUri }} style={styles.image} />
+
         {/* message counter badge */}
-        <View style={styles.badgeContainer}>
-            <Text style={styles.badgeText}>1</Text>
-        </View>
+        {chatRoom.newMessages ? <View style={styles.badgeContainer}>
+            <Text style={styles.badgeText}>{chatRoom.newMessages}</Text>
+        </View> : null}
+
         <View style={styles.rightContainer}>
             <View style={styles.upperRow}>
-            <Text style={styles.name}>Ol' Musky</Text>
-            <Text style={styles.text}>12:00 PM</Text>
+            <Text style={styles.name}>{user.name}</Text>
+            <Text style={styles.text}>{chatRoom.lastMessage.createdAt}</Text>
             </View>
             {/* message content */}
             <Text numberOfLines={1} style={styles.text}>{chatRoom.lastMessage.content}</Text>

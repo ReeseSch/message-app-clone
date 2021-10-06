@@ -13,7 +13,8 @@ export default [{
     id: 'm1',
     content: 'Bro, lets go colonize Mars!',
     createdAt: '2020-10-03T14:48:00.000Z',
-  }
+  },
+  newMessages: 1
 }, {
   id: '2',
   users: [{
