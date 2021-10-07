@@ -18,9 +18,9 @@ export default [{
 }, {
   id: '2',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
   }, {
     id: 'u3',
     name: 'Jeff',
@@ -34,9 +34,9 @@ export default [{
 }, {
   id: '3',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
   }, {
     id: 'u4',
     name: 'Zuck',
@@ -50,9 +50,9 @@ export default [{
 }, {
   id: '4',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
   }, {
     id: 'u5',
     name: 'Graham',
@@ -66,9 +66,9 @@ export default [{
 }, {
   id: '5',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
   }, {
     id: 'u6',
     name: 'Biahaze',
@@ -82,9 +82,9 @@ export default [{
 }, {
   id: '6',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
   }, {
     id: 'u7',
     name: 'Sus?',
@@ -98,9 +98,9 @@ export default [{
 }, {
   id: '7',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
   }, {
     id: 'u8',
     name: 'Daniel',
@@ -114,9 +114,9 @@ export default [{
 }, {
   id: '8',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
   }, {
     id: 'u9',
     name: 'Carlos',
@@ -130,9 +130,9 @@ export default [{
 }, {
   id: '9',
   users: [{
-    id: 'u1',
-    name: 'Vadim',
-    imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
+    id: 'u11',
+    name: 'Reese',
+    imageUri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'
   }, {
     id: 'u10',
     name: 'Angelina Jolie',
