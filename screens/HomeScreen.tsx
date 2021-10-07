@@ -6,7 +6,7 @@ import ChatRoomItem from '../components/ChatRoomItem/ChatRoomItem';
 import chatRoomsData from '../assets/dummy-data/ChatRooms'
 
 
-export default function TabOneScreen(){
+export default function HomeScreen(){
   return (
     <View style={styles.page}>
       <FlatList data={chatRoomsData} renderItem={({ item }) => <ChatRoomItem chatRoom={item} />} />

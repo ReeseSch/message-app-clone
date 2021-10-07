@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, StyleSheet, View, Image } from 'react-native'
+import { Text, View, Image, Pressable} from 'react-native'
+import { useNavigation } from "@react-navigation/core";
 import styles from "./styles";
 
 export default function ChatRoomItem(props) {
@@ -7,8 +8,14 @@ export default function ChatRoomItem(props) {
 
   const user = chatRoom.users[1]
 
+  const navigation = useNavigation()
+
+  const onPress = () => {
+      navigation.navigate('ChatRoom', { id: chatRoom.id })
+  }
+
     return (
-    <View style={styles.container}>
+    <Pressable onPress={onPress} style={styles.container}>
         <Image source={{ uri: user.imageUri }} style={styles.image} />
 
         {/* message counter badge */}
@@ -24,7 +31,7 @@ export default function ChatRoomItem(props) {
             {/* message content */}
             <Text numberOfLines={1} style={styles.text}>{chatRoom.lastMessage.content}</Text>
         </View>
-    </View>)
+    </Pressable>)
 }
 
 
