@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-howdy-staging-181832-authRole",
+      "UnauthRoleArn": "arn:aws:iam::347484702481:role/amplify-howdy-staging-181832-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::347484702481:role/amplify-howdy-staging-181832-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-howdy-staging-181832-deployment",
+      "UnauthRoleName": "amplify-howdy-staging-181832-unauthRole",
+      "StackName": "amplify-howdy-staging-181832",
+      "StackId": "arn:aws:cloudformation:us-east-2:347484702481:stack/amplify-howdy-staging-181832/25af9f70-2864-11ec-bb89-0a22cb018e6c",
+      "AmplifyAppId": "d2hch156qzbhl0"
+    },
+    "categories": {
+      "auth": {
+        "Howdy": {}
+      }
+    }
+  }
+}

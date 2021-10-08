@@ -18,6 +18,7 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import UserDropDown from '../components/UserDropDown'
 
 
 import ChatRoomScreen from '../screens/ChatRoomScreen';
@@ -56,13 +57,18 @@ function RootNavigator() {
   );
 }
 
+const onPressAlert = () => {
+  console.warn('The button works! Way to go!!!')
+}
+
+// Home Page Header
 const HomeHeader = (props) => {
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
       {/* <Image source={{ uri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'}}
         style={{ width: 30, height: 30, borderRadius: 30, paddingLeft:}}
       /> */}
-      <FontAwesome name="user-circle-o" size={28} color="grey" />
+      <FontAwesome name="user-circle-o" size={28} color="grey" onPress={onPressAlert} />
       <Text style={{ flex: 1, fontWeight: 'bold', fontSize: 18, textAlign: 'center' }}>Your Chats</Text>
       <Feather name="camera" size={28} color="grey" style={{ paddingRight: 15}} />
       <AntDesign name="edit" size={28} color="grey" style={{paddingRight: 24}} />
@@ -70,6 +76,7 @@ const HomeHeader = (props) => {
   )
 }
 
+// Chat Room Header
 const ChatHeader = (props) => {
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
