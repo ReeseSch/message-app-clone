@@ -1,14 +1,11 @@
-/**
- * If you are not familiar with React Navigation, refer to the "Fundamentals" guide:
- * https://reactnavigation.org/docs/getting-started
- *
- */
+
 import { FontAwesome, Feather, AntDesign } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable, Text, View, Image } from 'react-native';
+import { Menu, Divider, Provider} from 'react-native-paper'
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -68,7 +65,8 @@ const HomeHeader = (props) => {
       {/* <Image source={{ uri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'}}
         style={{ width: 30, height: 30, borderRadius: 30, paddingLeft:}}
       /> */}
-      <FontAwesome name="user-circle-o" size={28} color="grey" onPress={onPressAlert} />
+      {/* <FontAwesome name="user-circle-o" size={28} color="grey" onPress={onPressAlert} /> */}
+      <UserDropDown />
       <Text style={{ flex: 1, fontWeight: 'bold', fontSize: 18, textAlign: 'center' }}>Your Chats</Text>
       <Feather name="camera" size={28} color="grey" style={{ paddingRight: 15}} />
       <AntDesign name="edit" size={28} color="grey" style={{paddingRight: 24}} />
