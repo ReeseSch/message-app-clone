@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable, Text, View, Image } from 'react-native';
 import { Menu, Divider, Provider} from 'react-native-paper'
+import { Auth } from 'aws-amplify'
+import { useNavigation } from '@react-navigation/core'
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -20,6 +22,7 @@ import UserDropDown from '../components/UserDropDown'
 
 import ChatRoomScreen from '../screens/ChatRoomScreen';
 import HomeScreen from '../screens/HomeScreen'
+import SettingsScreen from '../screens/SettingsScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -46,6 +49,7 @@ function RootNavigator() {
       options={{ headerTitle: HomeHeader }}
       />
       <Stack.Screen name="ChatRoom" component={ChatRoomScreen} options={{ headerTitle: ChatHeader }} />
+      {/* <Stack.Screen name="Settings" component={SettingsScreen} options={{ title: 'Settings'}} /> */}
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
@@ -54,9 +58,15 @@ function RootNavigator() {
   );
 }
 
-const onPressAlert = () => {
-  console.warn('The button works! Way to go!!!')
+// sign out function
+const logOut = () => {
+  Auth.signOut()
 }
+// const navigation = useNavigation()
+// const onPress = () => {
+//   navigation.navigate('Settings')
+// }
+
 
 // Home Page Header
 const HomeHeader = (props) => {
@@ -65,8 +75,8 @@ const HomeHeader = (props) => {
       {/* <Image source={{ uri: 'https://drive.google.com/file/d/1zM7OvPgcFw2Vg1cWgHtdyItAwbhwYTed/view?usp=sharing'}}
         style={{ width: 30, height: 30, borderRadius: 30, paddingLeft:}}
       /> */}
-      {/* <FontAwesome name="user-circle-o" size={28} color="grey" onPress={onPressAlert} /> */}
-      <UserDropDown />
+      <FontAwesome name="user-circle-o" size={28} color="grey" onPress={logOut} />
+      {/* <UserDropDown /> */}
       <Text style={{ flex: 1, fontWeight: 'bold', fontSize: 18, textAlign: 'center' }}>Your Chats</Text>
       <Feather name="camera" size={28} color="grey" style={{ paddingRight: 15}} />
       <AntDesign name="edit" size={28} color="grey" style={{paddingRight: 24}} />

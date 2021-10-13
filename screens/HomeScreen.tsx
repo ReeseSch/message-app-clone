@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Text, StyleSheet, View, Image, FlatList } from 'react-native'
+import { Text, StyleSheet, View, Image, FlatList, Pressable } from 'react-native'
 import ChatRoomItem from '../components/ChatRoomItem/ChatRoomItem';
 
 import chatRoomsData from '../assets/dummy-data/ChatRooms'
@@ -10,6 +10,10 @@ export default function HomeScreen(){
   return (
     <View style={styles.page}>
       <FlatList data={chatRoomsData} renderItem={({ item }) => <ChatRoomItem chatRoom={item} />} />
+
+      <Pressable>
+        <Text>Logout</Text>
+      </Pressable>
     </View>
     
   );
@@ -24,6 +28,5 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'lightgrey'
   },
-
 })
 
