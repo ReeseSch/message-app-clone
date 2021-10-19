@@ -11,10 +11,10 @@
     "userpoolArn": {
       "Type": "String"
     },
-    "functionHowdyPostConfirmationName": {
+    "functionHelloTherePostConfirmationName": {
       "Type": "String"
     },
-    "functionHowdyPostConfirmationArn": {
+    "functionHelloTherePostConfirmationArn": {
       "Type": "String"
     }
   },
@@ -34,7 +34,7 @@
       "Properties": {
         "Action": "lambda:InvokeFunction",
         "FunctionName": {
-          "Ref": "functionHowdyPostConfirmationName"
+          "Ref": "functionHelloTherePostConfirmationName"
         },
         "Principal": "cognito-idp.amazonaws.com",
         "SourceArn": {
@@ -134,9 +134,9 @@
         "lambdaConfig": [
           {
             "triggerType": "PostConfirmation",
-            "lambdaFunctionName": "HowdyPostConfirmation",
+            "lambdaFunctionName": "HelloTherePostConfirmation",
             "lambdaFunctionArn": {
-              "Ref": "functionHowdyPostConfirmationArn"
+              "Ref": "functionHelloTherePostConfirmationArn"
             }
           }
         ]

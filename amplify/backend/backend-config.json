@@ -1,12 +1,12 @@
 {
   "auth": {
-    "Howdy": {
+    "HelloThere": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "HowdyPostConfirmation",
+          "resourceName": "HelloTherePostConfirmation",
           "triggerProvider": "Cognito",
           "attributes": [
             "Arn",
@@ -37,7 +37,7 @@
     }
   },
   "api": {
-    "Howdy": {
+    "HelloThere": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -56,7 +56,7 @@
             {
               "authenticationType": "AMAZON_COGNITO_USER_POOLS",
               "userPoolConfig": {
-                "userPoolId": "authHowdy"
+                "userPoolId": "authHelloThere"
               }
             }
           ]
@@ -65,7 +65,7 @@
     }
   },
   "function": {
-    "HowdyPostConfirmation": {
+    "HelloTherePostConfirmation": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"

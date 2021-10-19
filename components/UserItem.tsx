@@ -1,15 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Text, View, Image, Pressable, StyleSheet } from 'react-native'
 import { useNavigation } from "@react-navigation/core";
+import { DataStore } from '@aws-amplify/datastore'
+import { ChatRoom, User, ChatRoomUser } from '../src/models'
+import { Auth } from "aws-amplify";
 
 
-export default function ChatRoomItem({ user }) {
+export default function UserItem({ user }) {
+    
 
   const navigation = useNavigation()
 
-  const onPress = () => {
-      
+  const onPress = async () => {
+    //   create new chat room 
+    const newChatRoom = await DataStore.save(new ChatRoom({newMessages: 0}))
+
+    //   connect current user with new chat room 
+    const authUser = await Auth.currentAuthenticatedUser()
+    const dbUser = await DataStore.query(User, authUser.attributes.sub)
+    
+    // console.log(authUser)
+    // console.log('...........')
+    console.log(dbUser)
+    // console.log(authUser.attributes.sub)
+
+                                    // .............2:52:53..........
+
+    await DataStore.save(new ChatRoomUser({
+        user: dbUser,
+        chatroom: newChatRoom,
+    }))
+    
+    //   connecting other user to chatroom
+    
+    await DataStore.save(new ChatRoomUser({
+        user: user,
+        chatroom: newChatRoom
+    }))
+
+    navigation.navigate('ChatRoom', {id: newChatRoom.id})
+
   }
+
 
     return (
     <Pressable onPress={onPress} style={styles.container}>
@@ -20,7 +52,9 @@ export default function ChatRoomItem({ user }) {
             <Text style={styles.name}>{user.name}</Text>
         </View>
         </View>
+        {/* <Text>This is from UserItem!!! You're pretty much the best dev to ever live ya know?</Text> */}
     </Pressable>)
+
 }
 
 const styles = StyleSheet.create({

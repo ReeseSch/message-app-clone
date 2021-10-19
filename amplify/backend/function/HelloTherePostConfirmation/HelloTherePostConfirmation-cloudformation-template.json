@@ -67,12 +67,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "HowdyPostConfirmation",
+            "HelloTherePostConfirmation",
             {
               "Fn::Join": [
                 "",
                 [
-                  "HowdyPostConfirmation",
+                  "HelloTherePostConfirmation",
                   "-",
                   {
                     "Ref": "env"
@@ -122,12 +122,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "HowdyPostConfirmation",
+            "HelloTherePostConfirmation",
             {
               "Fn::Join": [
                 "",
                 [
-                  "HowdyPostConfirmation",
+                  "HelloTherePostConfirmation",
                   "-",
                   {
                     "Ref": "env"

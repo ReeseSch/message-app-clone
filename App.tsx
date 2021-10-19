@@ -11,7 +11,13 @@ import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 
+console.ignoredYellowBox = ['Setting a timer']
+
 Amplify.configure(config)
+  // Analytics: {
+  //   disabled: true
+  // },
+// })
 
 function App() {
   const isLoadingComplete = useCachedResources();
