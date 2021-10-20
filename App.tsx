@@ -4,14 +4,14 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Amplify, { Auth } from 'aws-amplify';
 import { withAuthenticator } from 'aws-amplify-react-native' 
 import config from './src/aws-exports'
-import { Text } from 'react-native'
+import { Text, LogBox } from 'react-native'
 
 
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 
-console.ignoredYellowBox = ['Setting a timer']
+LogBox.ignoreLogs(['Setting a timer'])
 
 Amplify.configure(config)
   // Analytics: {
@@ -23,7 +23,8 @@ function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
 
-  Auth.currentAuthenticatedUser().then(console.log)
+  Auth.currentAuthenticatedUser()
+  // .then(console.log)
 
   if (!isLoadingComplete) {
     return null;
